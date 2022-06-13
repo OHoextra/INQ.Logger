@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger.Console", "Logger.Console\Logger.Console.csproj", "{87C5158A-9BAD-4DFC-9C6F-A4A949E68DBF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger.Console", "INQ.Logger.Console\INQ.Logger.Console.csproj", "{87C5158A-9BAD-4DFC-9C6F-A4A949E68DBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger.Serilog", "Logger.Serilog\Logger.Serilog.csproj", "{B101379D-E570-4849-BBEB-9026AEBF078B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger.Serilog", "INQ.Logger.Serilog\INQ.Logger.Serilog.csproj", "{B101379D-E570-4849-BBEB-9026AEBF078B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger.Model", "Logger.Model\Logger.Model.csproj", "{445E6090-2C7B-441C-B1BA-0A79668DD918}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger.Model", "INQ.Logger.Model\INQ.Logger.Model.csproj", "{445E6090-2C7B-441C-B1BA-0A79668DD918}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{2FDA32CF-2304-42DA-99F8-DD75293CB6C0}"
 EndProject

@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Logger.Model\Logger.Model.csproj" />
-    <ProjectReference Include="..\Logger.Serilog\Logger.Serilog.csproj" />
+    <ProjectReference Include="..\INQ.Logger.Model\INQ.Logger.Model.csproj" />
+    <ProjectReference Include="..\INQ.Logger.Serilog\INQ.Logger.Serilog.csproj" />
   </ItemGroup>
 
   <ItemGroup>
