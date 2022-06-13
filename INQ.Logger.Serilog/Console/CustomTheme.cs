@@ -1,6 +1,6 @@
 ﻿using Serilog.Sinks.SystemConsole.Themes;
 
-namespace Logger.Serilog.Console
+namespace INQ.Logger.Serilog.Console
 {
     public static class AnsiConsoleThemes
     {

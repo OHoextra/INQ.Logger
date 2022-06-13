@@ -1,7 +1,7 @@
-﻿using Logger.Serilog;
+﻿using INQ.Logger.Serilog;
 using System.Diagnostics;
 
-namespace Logger.Model
+namespace INQ.Logger.Application
 {
     public static class ProcessLogger
     {

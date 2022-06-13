@@ -1,4 +1,4 @@
-﻿namespace Logger.Model
+﻿namespace INQ.Logger.Application
 {
     public abstract class TextProvider
     {

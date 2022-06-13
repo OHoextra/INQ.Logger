@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Logger.Model;
-using Logger.Serilog;
+using INQ.Logger.Application;
+using INQ.Logger.Serilog;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 

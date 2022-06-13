@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Serilog;
 
-namespace Logger.Serilog
+namespace INQ.Logger.Serilog
 {
     public static class SerilogHelper
     {

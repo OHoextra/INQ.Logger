@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\INQ.Logger.Serilog\INQ.Logger.Serilog.csproj" />
+  </ItemGroup>
+
 </Project>
