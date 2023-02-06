@@ -1,40 +1,45 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using INQ.Logger.Serilog.Console;
+using Microsoft.Extensions.Configuration;
 using Serilog;
+using Serilog.Debugging;
 
 namespace INQ.Logger.Serilog
 {
     public static class SerilogHelper
     {
-        public static ILogger GetLoggerForContext<T>()
-        {
-            var loggerConfig = ConfigureFromJson();
+        private const string DefaultLogTemplate = "[{Timestamp:HH:mm:ss}|{Level:u3}|{SourceContext}: {Message:lj} {NewLine}{Exception}";
 
-            return loggerConfig.CreateLogger()
-                .ForContext<T>();
+        private static LoggerConfiguration? _loggerConfig;
+        private static bool _hasInitialized;
+
+        private static LoggerConfiguration ConfigureLogger(IConfiguration config)
+        {
+            if (_loggerConfig == null)
+            {
+                var baseConfig = new LoggerConfiguration().ReadFrom.Configuration(config);
+                baseConfig.MinimumLevel.Information();
+                baseConfig.Enrich.FromLogContext();
+                baseConfig.WriteTo.Console(outputTemplate: DefaultLogTemplate, theme: AnsiConsoleThemes.CustomTheme);
+
+                _loggerConfig = baseConfig;
+            }
+
+            return _loggerConfig;
         }
 
-        public static void SetStaticLogger()
+        public static ILogger InitializeLogger(IConfiguration config)
         {
-            var loggerConfig = ConfigureFromJson();
-            Log.Logger = loggerConfig.CreateLogger();
-        }
-        public static ILogger GetLogger()
-        {
-            var loggerConfig = ConfigureFromJson();
+            var logger = ConfigureLogger(config).CreateLogger();
 
-            return loggerConfig.CreateLogger();
-        }
+            if (!_hasInitialized)
+            {
+                SelfLog.Enable(System.Console.Out);
+                Log.Logger = logger;
 
-        public static LoggerConfiguration ConfigureFromJson()
-        {
-            var configuration = new ConfigurationBuilder()
-                .AddJsonFile($"appsettings.json", true, true)
-                .Build();
+                _hasInitialized = true;
+            }
 
-            var loggerConfig = new LoggerConfiguration()
-                .ReadFrom.Configuration(configuration);
-
-            return loggerConfig;
+            return logger;
         }
     }
 }

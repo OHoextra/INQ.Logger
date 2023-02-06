@@ -1,10 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using INQ.Logger.Application;
-using INQ.Logger.Serilog;
-using Microsoft.Extensions.Configuration;
-using Serilog;
 
-namespace Logger.Console
+using INQ.Logger.Application;
+using INQ.Logger.Application.Configuration;
+using INQ.Logger.Serilog;
+
+namespace INQ.Logger.Console
 {
     public class Program
     {
@@ -13,7 +13,9 @@ namespace Logger.Console
         {
             try
             {
-                ProcessLogger.LogProcesses();
+                var configuration = ConfigurationHelper.GetConfiguration();
+                var logger = SerilogHelper.InitializeLogger(configuration);
+                ProcessLogger.LogProcesses(logger);
             }
             catch (Exception ex)
             {

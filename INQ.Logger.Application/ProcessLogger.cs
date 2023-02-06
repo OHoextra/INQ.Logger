@@ -1,13 +1,12 @@
-﻿using INQ.Logger.Serilog;
-using System.Diagnostics;
+﻿using System.Diagnostics;
+using Serilog;
 
 namespace INQ.Logger.Application
 {
     public static class ProcessLogger
     {
-        public static void LogProcesses()
+        public static void LogProcesses(ILogger logger)
         {
-            var logger = SerilogHelper.GetLogger();
             Process[] processes = Process.GetProcesses();
             foreach (Process p in processes)
             {

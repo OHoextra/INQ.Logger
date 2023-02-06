@@ -1,4 +1,6 @@
-﻿namespace INQ.Logger.Application
+﻿using INQ.Logger.Application.Abstract;
+
+namespace INQ.Logger.Application
 {
     public class LoremIpsumProvider : TextProvider
     {
