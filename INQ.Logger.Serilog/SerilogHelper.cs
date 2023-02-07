@@ -7,7 +7,7 @@ namespace INQ.Logger.Serilog
 {
     public static class SerilogHelper
     {
-        private const string DefaultLogTemplate = "[{Timestamp:HH:mm:ss}|{Level:u3}|{SourceContext}: {Message:lj} {NewLine}{Exception}";
+        private const string DEFAULT_LOG_TEMPLATE = "[{Timestamp:HH:mm:ss}|{Level:u3}|{SourceContext}: {Message:lj} {NewLine}{Exception}";
 
         private static LoggerConfiguration? _loggerConfig;
         private static bool _hasInitialized;
@@ -19,7 +19,7 @@ namespace INQ.Logger.Serilog
                 var baseConfig = new LoggerConfiguration().ReadFrom.Configuration(config);
                 baseConfig.MinimumLevel.Information();
                 baseConfig.Enrich.FromLogContext();
-                baseConfig.WriteTo.Console(outputTemplate: DefaultLogTemplate, theme: AnsiConsoleThemes.CustomTheme);
+                baseConfig.WriteTo.Console(outputTemplate: DEFAULT_LOG_TEMPLATE, theme: AnsiConsoleThemes.CustomTheme);
 
                 _loggerConfig = baseConfig;
             }
