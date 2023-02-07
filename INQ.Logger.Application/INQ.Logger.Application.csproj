@@ -8,10 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="7.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\INQ.Logger.Serilog\INQ.Logger.Serilog.csproj" />
+    <PackageReference Include="Serilog" Version="2.12.0" />
   </ItemGroup>
 
 </Project>

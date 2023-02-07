@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using Sandbox.Application.Extensions;
 using Serilog;
 
 namespace INQ.Logger.Application

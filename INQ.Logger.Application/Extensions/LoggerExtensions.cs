@@ -1,7 +1,7 @@
 ﻿using Serilog;
 using Serilog.Events;
 
-namespace Sandbox.Application.Extensions;
+namespace INQ.Logger.Application.Extensions;
 
 public static class LoggerExtensions
 {

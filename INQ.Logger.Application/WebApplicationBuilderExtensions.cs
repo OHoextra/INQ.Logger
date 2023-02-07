@@ -1,4 +1,4 @@
-﻿namespace INQ.Logger.Serilog.Extensions;
+﻿namespace INQ.Logger.Application;
 
 public static class WebApplicationBuilderExtensions
 {
