@@ -1,6 +1,6 @@
-﻿using INQ.Logger.Application.Abstract;
+﻿using INQ.Logger.Abstract;
 
-namespace INQ.Logger.Application
+namespace INQ.Logging.Console.TestClasses
 {
     public class LoremIpsumProvider : TextProvider
     {

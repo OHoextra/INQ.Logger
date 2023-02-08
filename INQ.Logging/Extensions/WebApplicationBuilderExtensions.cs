@@ -1,4 +1,9 @@
-﻿namespace INQ.Logger.Application;
+﻿using INQ.Logging.Helpers;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Logging;
+using Serilog;
+
+namespace INQ.Logging.Extensions;
 
 public static class WebApplicationBuilderExtensions
 {

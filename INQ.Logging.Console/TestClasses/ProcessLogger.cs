@@ -1,7 +1,8 @@
 ﻿using System.Diagnostics;
+using INQ.Logging.Extensions;
 using Serilog;
 
-namespace INQ.Logger.Application
+namespace INQ.Logging.Console.TestClasses
 {
     public static class ProcessLogger
     {

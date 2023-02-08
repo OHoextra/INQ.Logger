@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace INQ.Logger.Application.Configuration;
+namespace INQ.Logging.Helpers;
 
 public static class ConfigurationHelper
 {

@@ -1,4 +1,4 @@
-﻿namespace INQ.Logger.Application;
+﻿namespace INQ.Logging.Helpers;
 
 public static class DirectoryHelper
 {
