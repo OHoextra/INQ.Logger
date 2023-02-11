@@ -4,10 +4,17 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>$(AssemblyName)</Title>
+    <Description>Contains Serilog based helper classes to simplify and support swift and resolute implementations of Serilog.</Description>
+    <PackageProjectUrl>https://dev.azure.com/OHoekstra/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/OHoextra/INQ.Logging</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Logging;Logger;Serilog</PackageTags>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
     <PackageReference Include="Serilog" Version="2.12.0" />

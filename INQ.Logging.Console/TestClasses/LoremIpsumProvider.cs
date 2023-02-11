@@ -1,4 +1,4 @@
-﻿using INQ.Logger.Abstract;
+﻿using INQ.Logging.Console.TestClasses.Abstract;
 
 namespace INQ.Logging.Console.TestClasses
 {
