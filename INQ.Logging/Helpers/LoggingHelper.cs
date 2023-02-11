@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using INQ.Utilities.Helpers;
+using Microsoft.Extensions.Configuration;
 using Serilog;
 using Serilog.Debugging;
 

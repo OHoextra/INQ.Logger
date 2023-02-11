@@ -1,4 +1,6 @@
 ﻿using INQ.Logging.Console.TestClasses;
+using INQ.Logging.Helpers;
+using INQ.Utilities.Helpers;
 
 namespace INQ.Logging.Console;
 
